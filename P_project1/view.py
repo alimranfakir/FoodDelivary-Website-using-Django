@@ -12,7 +12,7 @@ def aboutPage(request):
 
 def blogPage(request):
    
-    return render(request,"contact.html")
+    return render(request,"blog.html")
 def menuPage(request):
     return render(request,"menu.html")
 def productsPage(request):

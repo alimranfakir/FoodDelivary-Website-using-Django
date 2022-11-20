@@ -10,10 +10,12 @@
     <p class="lead"><strong>Please check your email</strong> we will contact you soon.</p>
     <hr>
     <p>
-      Having trouble? <a href="https://bootstrapcreative.com/">Contact us</a>
+      {% url 'contact' as url%}
+      Having trouble? <a href="{{url}}">Contact us</a>
     </p>
     <p class="lead">
-      <a class="btn btn-primary btn-sm" href="https://bootstrapcreative.com/" role="button">Continue to homepage</a>
+      {% url 'home' as url %}
+      <a class="btn btn-primary btn-sm" href="{{url}}" role="button">Continue to homepage</a>
     </p>
   </div>
 
