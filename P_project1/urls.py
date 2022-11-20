@@ -21,12 +21,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', view.homePage, name='home'),
     path('about/', view.aboutPage,name='about'),
-     path('blog/', view.blogPage,name='blog'),
-       path('products/', view.productsPage,name='products'),
+    path('blog/', view.blogPage,name='blog'),
+    path('products/', view.productsPage,name='products'),
 
-      path('contact/', view.contactPage,name='contact'),
-       path('menu/', view.menuPage,name='menu'),
-        path('review/', view.reviewPage,name='review'),
+    path('contact/', view.contactPage,name='contact'),
+    path('menu/', view.menuPage,name='menu'),
+    path('review/', view.reviewPage,name='review'),
+    path('thankyou/', view.thankyoupage,name='thankyou'),
 
     
 ]

@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
 
 
@@ -19,6 +19,8 @@ def productsPage(request):
     return render(request,"products.html")
 def reviewPage(request):
     return render(request,"review.html")
+def thankyoupage(request):
+    return render(request,"thankyou.html")
 
 def contactPage(request):
     data={}
@@ -27,18 +29,19 @@ def contactPage(request):
     try:
         if request.method=="POST":
             
-            name = str(request.POST['userName'])
-            email = str(request.POST['useremail'])
-            number = int(request.POST['userNumber'])
+            name = str(request.POST.get('userName'))
+            email = str(request.POST.get('userEmail'))
+            number = int(request.POST.get('userNumber'))
             
 
             data={
-                    'name': name,
-                    'email': email,
-                    'number': number,
-                    'output': name,
+                'name': name,
+                'email': email,
+                'number': number,
+                'output': name,
             }
-            return HttpResponseRedirect('/about/')
+            
+            return HttpResponseRedirect('/thankyou/')
 
     except:
         pass
