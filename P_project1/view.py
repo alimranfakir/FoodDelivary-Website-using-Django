@@ -1,5 +1,6 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
+#from .forms import userForm
 
 
 def homePage(request):
@@ -23,6 +24,7 @@ def thankyoupage(request):
     return render(request,"thankyou.html")
 
 def contactPage(request):
+   # fn = userForm
     data={}
     
     
